@@ -145,6 +145,9 @@ void Teleoperation::publishing_data(geometry_msgs::msg::Twist twist)
 ### __동작 결과__
 
 ## 3. subscribe_battery_node
+본 노드는 turtlebot으로부터 `battery_state` topic을 받아 화면에 출력합니다.
+### 동작 process
 
 ## 4. obstacle_detection_node
+
 ## 5. obstacle_avoidance_node
