@@ -26,7 +26,7 @@
 본 노드는 사용자로부터 key를 입력받아 turtlebot의 `cmd_vel` topic에 값을 입력합니다.
 
 노드의 동작 원리는 다음과 같습니다.
-
+<img src="./image/teleroperation_process.jpg" width="100%"/>
 ## 3. subscribe_battery_node
 ## 4. obstacle_detection_node
 ## 5. obstacle_avoidance_node
