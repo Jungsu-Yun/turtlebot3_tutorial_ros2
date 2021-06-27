@@ -15,7 +15,6 @@ ObstacleAvoidance::ObstacleAvoidance() : Node("turtlebot3_obstacle_avoidance")
 
 void ObstacleAvoidance::laser_scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
 {
-    std::cout<< "Callback!!!" << std::endl;
     if(msg->ranges[0] > this->distance_limit && msg->ranges[45] > this->distance_limit && msg->ranges[315] > this->distance_limit)
     {
         this->twist.linear.x = 0.05;

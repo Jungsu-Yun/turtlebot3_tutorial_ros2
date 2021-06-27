@@ -1,4 +1,9 @@
 # turtlebot3_tutorial_ros2
+<img src='image\teleoperation_1.gif' width="25%"/>
+<img src='image\subscribe.gif' width="25%"/>
+<img src='image\obstacle_detection.gif' width="25%"/>
+<img src='image\obstacle_avoidance.gif' width="25%"/>
+
 본 리포지토리는 turtlebot3와 ROS2를 활용하여 기본적인 topic publishing, subscribe, service call 등을 실습해보기 위해 존재합니다.
 
 기본적인 Sourcecode는 다음의 페이지를 참고하였습니다.
@@ -143,6 +148,7 @@ void Teleoperation::publishing_data(geometry_msgs::msg::Twist twist)
     ```
 * 키가 입력됨에 따라 정상적으로 turtlebot이 이동하는지 확인한다.
 ### __동작 결과__
+<img src='image\teleoperation_1.gif' width="100%"/>
 
 ## 3. subscribe_battery_node
 본 노드는 turtlebot으로부터 `battery_state` topic을 받아 화면에 출력합니다.
@@ -178,7 +184,7 @@ void BatterySubscriber::battery_callback(const sensor_msgs::msg::BatteryState::S
     ```
 
 ### __동작결과__
-<img src='image\teleoperation_1.gif' />
+<img src='image\subscribe.gif' width="100%"/>
 
 ## 4. obstacle_detection_node
  Teleoperation과 동시에 사용하며, 전방 30º 반경의 laser scan값을 읽어 15cm 이내로 장애물이 감지된 경우 경보 알람을 울리게 합니다.
@@ -259,7 +265,7 @@ else
     ```
 
 ### __동작결과__
-
+<img src='image\obstacle_detection.gif' width="100%"/>
 
 ## 5. obstacle_avoidance_node
 turtlebot3가 전진을 하다 전방 45º 반경 내에 30cm 이내로 장애물이 인식되는 경우 시계방향으로 회전하고 장애물이 감지되지 않으면 다시 전진을 합니다.
@@ -346,4 +352,4 @@ void ObstacleAvoidance::laser_scan_callback(const sensor_msgs::msg::LaserScan::S
     ```
 
 ### __동작결과__
-
+<img src='image\obstacle_avoidance.gif' width="100%"/>
