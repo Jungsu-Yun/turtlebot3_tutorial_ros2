@@ -178,6 +178,7 @@ void BatterySubscriber::battery_callback(const sensor_msgs::msg::BatteryState::S
     ```
 
 ### __동작결과__
+<img src='image\teleoperation_1.gif' />
 
 ## 4. obstacle_detection_node
  Teleoperation과 동시에 사용하며, 전방 30º 반경의 laser scan값을 읽어 15cm 이내로 장애물이 감지된 경우 경보 알람을 울리게 합니다.
