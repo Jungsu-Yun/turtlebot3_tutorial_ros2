@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-06-27T08:39:00.196Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.272 Whale/2.9.118.16 Safari/537.36" version="14.8.1" etag="MUG2XaxR8ynTLQypjtmZ" type="github"><diagram id="cdTv1l3PrNtyrq2VXeD-">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-06-27T08:41:29.785Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.272 Whale/2.9.118.16 Safari/537.36" etag="LOCqOuey53N4uZInvfgK" version="14.8.1" type="github">
+  <diagram id="cdTv1l3PrNtyrq2VXeD-" name="Page-1">
+    <mxGraphModel dx="1372" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-1" value="Node init" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-2" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-5" value="입력&lt;br&gt;key값 확인" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-7" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-8" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="280" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-9" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="414" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-10" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="550" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-11" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="480" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-12" value="사용자 키보드&lt;br&gt;입력 감지" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="614" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
