@@ -182,6 +182,82 @@ void BatterySubscriber::battery_callback(const sensor_msgs::msg::BatteryState::S
 ## 4. obstacle_detection_node
  Teleoperation과 동시에 사용하며, 전방 30º 반경의 laser scan값을 읽어 15cm 이내로 장애물이 감지된 경우 경보 알람을 울리게 합니다.
 
- ## __동작 Process__
+### __동작 Process__
+<img src="image\obstacle_detecion_process.jpg"/>
+
+### __Sourcecode 설명__
+`ObstacleDetection`클래스의 Constructor에서 `scan`topic을 subscribe하는 `rclcpp::Subscription`을 선언한다.
+```c++
+ this->laser_subscriber = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan",defalut_qos, std::bind(&ObstacleDetection::laser_callback,this, _1));
+```
+
+`laser callback`함수를 호출하여 `laser_scan`값의 15º값, 0º값, 345º값을 읽어온다. message의 `range`를 사용하며 rage는 각 1도씩 거리정보를 담아두게되는 vector클래스로 구성되어 있다.
+```msg
+# Single scan from a planar laser range-finder
+#
+# If you have another ranging device with different behavior (e.g. a sonar
+# array), please find or create a different message, since applications
+# will make fairly laser-specific assumptions about this data
+
+Header header            # timestamp in the header is the acquisition time of 
+                         # the first ray in the scan.
+                         #
+                         # in frame frame_id, angles are measured around 
+                         # the positive Z axis (counterclockwise, if Z is up)
+                         # with zero angle being forward along the x axis
+                         
+float32 angle_min        # start angle of the scan [rad]
+float32 angle_max        # end angle of the scan [rad]
+float32 angle_increment  # angular distance between measurements [rad]
+
+float32 time_increment   # time between measurements [seconds] - if your scanner
+                         # is moving, this will be used in interpolating position
+                         # of 3d points
+float32 scan_time        # time between scans [seconds]
+
+float32 range_min        # minimum range value [m]
+float32 range_max        # maximum range value [m]
+
+float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)
+float32[] intensities    # intensity data [device-specific units].  If your
+                         # device does not provide intensities, please leave
+                         # the array empty.
+```
+range값에서 특정 detection 범위 이내로 들어오게 되면 `sound` Service에 Error 값을 request한다.
+```c++
+if(msg->ranges[0] < this->minimum_distace && msg->ranges[15] && msg->ranges[345])
+{
+    auto sound = std::make_shared<turtlebot3_msgs::srv::Sound::Request>();
+    sound->value = 3;
+
+    auto result = sound_client->async_send_request(sound);
+    if(rclcpp::spin_until_future_complete(this->sound_node, result) == rclcpp::executor::FutureReturnCode::SUCCESS)
+        RCLCPP_WARN(this->get_logger(), "Too Close!!");
+    else
+        RCLCPP_ERROR(this->get_logger(), "Failed to call service Sound");
+}
+```
+특정 범위 이외의 값인 경우 현재 측정된 값을 출력한다.
+```c++
+else
+{
+    RCLCPP_INFO(this->get_logger(), "Current obstacle distance : %f \t %f", msg->ranges[0], msg->ranges[345]);
+}
+```
+
+### __구동하기__
+* turtlebot3 구동 명령어
+    ```bash
+    $ ros2 launch turtlebot3_bringup robot.launch.py
+    ```
+
+* Remote PC 구동 명령어
+    ```bash
+    $ ros2 run turtlebot3_tutorial_ros2 obstacle_detection_node
+    $ ros2 run turtlebot3_tutorial_ros2 teleoperation_node
+    ```
+
+### __동작결과__
+
 
 ## 5. obstacle_avoidance_node
