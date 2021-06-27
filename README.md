@@ -25,8 +25,126 @@
 ## 2. Teleoperation Node
 본 노드는 사용자로부터 key를 입력받아 turtlebot의 `cmd_vel` topic에 값을 입력합니다.
 
-노드의 동작 원리는 다음과 같습니다.
+### 노드 동작 Process
 <img src="image\teleoperation_process.jpg"/>
+
+### Sourcecode 설명
+먼저 노드를 `rclcpp::init`을 활용하여 초기화 한 후 무한루프를 돌며 `kbhit()`을 이용하여 사용자가 키보드를 입력했는지 확인합니다.
+```c++
+int Teleoperation::kbhit()
+{
+    struct termios oldt, newt;
+    int ch;
+    int oldf;
+
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+    fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+
+    ch = getchar();
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    fcntl(STDIN_FILENO, F_SETFL, oldf);
+
+    if(ch != EOF)
+    {
+        ungetc(ch, stdin);
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+사용자의 키가 입력되었다면 `getch()`을 이용하여 사용자의 key값을 받게 됩니다.
+```c++
+int Teleoperation::getch()
+{
+    char buf = 0;
+    struct termios old = {0};
+    fflush(stdout);
+    if(tcgetattr(0, &old) < 0)
+        perror("tcsetattr()");
+    old.c_lflag &= ~ICANON;
+    old.c_lflag &= ~ECHO;
+    old.c_cc[VMIN] = 1;
+    old.c_cc[VTIME] = 0;
+    if(tcsetattr(0, TCSANOW, &old) < 0)
+        perror("tcsetattr ICANON");
+    if(read(0, &buf, 1) < 0)
+        perror("read()");
+    old.c_lflag |= ICANON;
+    old.c_lflag |= ECHO;
+    if(tcsetattr(0, TCSADRAIN, &old) < 0)
+        perror("tcsetattr ~ICANON");
+    return buf;
+}
+```
+
+사용자의 키값에 따라 각각 속도를 매핑해주도록 합니다.
+```c++
+if(key == 'w')
+    this->target_twist_linear_x += step_linear_speed;
+else if(key == 'x')
+    this->target_twist_linear_x -= step_linear_speed;
+else if(key == 'a')
+    this->target_tiwst_angular_z += step_angular_speed;
+else if(key == 'd')
+    this->target_tiwst_angular_z -= step_angular_speed;
+else if(key == 's' || key ==' ')
+{
+    this->target_twist_linear_x = 0;
+    this->target_tiwst_angular_z = 0;
+}
+else if(key == 'q')
+    break;
+else
+    RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Wrong input!");
+```
+Turtlebot3 Burger의 최대 `Linear 속도는 0.22` 이고 최대 `Angular 각도는 2.84`이다. 해당 속도를 초과하는 값은 입력받을 수 없기 때문에 `calculate_max_speed()`함수를 사용하여 최대 속도 여부를 판단한다.
+```c++
+geometry_msgs::msg::Twist Teleoperation::calculate_max_speed(geometry_msgs::msg::Twist twist)
+{
+    if(abs(twist.linear.x) > MAX_TURTLEBOT_LINEAR_SPEED)
+    {
+        if(twist.linear.x < 0)
+            twist.linear.x = MAX_TURTLEBOT_LINEAR_SPEED * -1;
+        else
+            twist.linear.x = MAX_TURTLEBOT_LINEAR_SPEED;
+    }
+    if(abs(twist.angular.z) > MAX_TURTLEBOT_ANGULAR_SPEED)
+    {
+        if(twist.angular.z < 0)
+            twist.angular.z = MAX_TURTLEBOT_ANGULAR_SPEED * -1;
+        else
+            twist.angular.z = MAX_TURTLEBOT_ANGULAR_SPEED;
+    }
+    return twist;
+}
+```
+최대속도 검증 후 `geometry_msgs::msg::Twist` 타입의 객체를 `publish`해주도록 한다.
+```c++
+void Teleoperation::publishing_data(geometry_msgs::msg::Twist twist)
+{
+    this->cmd_pub->publish(twist);
+}
+```
+### __구동하기__
+* Turtlebot 구동 명령어
+    ```bash
+    $ ros2 launch turtlebot3_bringup robot.launch.py
+    ```
+* Remoe PC 구동 명령어
+    ```bash
+    $ ros2 run turtlebot3_tutorial_ros2 teleoperation_node
+    ```
+* 키가 입력됨에 따라 정상적으로 turtlebot이 이동하는지 확인한다.
+### __동작 결과__
+
 ## 3. subscribe_battery_node
+
 ## 4. obstacle_detection_node
 ## 5. obstacle_avoidance_node
