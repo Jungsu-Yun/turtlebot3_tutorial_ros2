@@ -25,10 +25,10 @@
 ## 2. Teleoperation Node
 본 노드는 사용자로부터 key를 입력받아 turtlebot의 `cmd_vel` topic에 값을 입력합니다.
 
-### 노드 동작 Process
+### __노드 동작 Process__
 <img src="image\teleoperation_process.jpg"/>
 
-### Sourcecode 설명
+### __Sourcecode 설명__
 먼저 노드를 `rclcpp::init`을 활용하여 초기화 한 후 무한루프를 돌며 `kbhit()`을 이용하여 사용자가 키보드를 입력했는지 확인합니다.
 ```c++
 int Teleoperation::kbhit()
@@ -146,8 +146,42 @@ void Teleoperation::publishing_data(geometry_msgs::msg::Twist twist)
 
 ## 3. subscribe_battery_node
 본 노드는 turtlebot으로부터 `battery_state` topic을 받아 화면에 출력합니다.
-### 동작 process
+### __동작 process__
 <img src='image\subscribe_node_process.jpg' />
 
+### __Sourcecode 설명__
+BatterySubscriber 생성자에서 `battery_state` topic을 subscribe하는 `rclcpp::Subscription`을 선언한다.
+```c++
+this->battery_subscriber = this->create_subscription<sensor_msgs::msg::BatteryState>("/battery_state", 10, std::bind(&BatterySubscriber::battery_callback, this, _1));
+```
+
+`battery_callback`을 통해 배터리 상태를 지역변수에 담은 후 `RCLCPP_INFO`를 통해 출력한다.
+```c++
+void BatterySubscriber::battery_callback(const sensor_msgs::msg::BatteryState::SharedPtr msg) const
+{
+    double current_voltage = msg->voltage;
+    double current_percentage = msg->percentage;
+
+    RCLCPP_INFO(this->get_logger(), "Current Percentage : %f\t Current Voltage : %f", current_percentage, current_voltage);
+}
+```
+
+### __구동하기__
+* turtlebot3 구동 명령어
+    ```bash
+    $ ros2 launch turtlebot3_bringup robot.launch.py
+    ```
+
+* Remote PC 구동 명령어
+    ```bash
+    $ ros2 run turtlebot3_tutorial_ros2 subscribe_battery_node
+    ```
+
+### __동작결과__
+
 ## 4. obstacle_detection_node
+ Teleoperation과 동시에 사용하며, 전방 30º 반경의 laser scan값을 읽어 15cm 이내로 장애물이 감지된 경우 경보 알람을 울리게 합니다.
+
+ ## __동작 Process__
+
 ## 5. obstacle_avoidance_node
