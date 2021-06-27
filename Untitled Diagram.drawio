@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-27T08:52:19.820Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.272 Whale/2.9.118.16 Safari/537.36" etag="zA04GXYpPERzpSPk0ZKW" version="14.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-27T08:52:49.895Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.272 Whale/2.9.118.16 Safari/537.36" etag="LQStLf--7gtT16cE3SEb" version="14.8.1" type="github">
   <diagram id="cdTv1l3PrNtyrq2VXeD-" name="Page-1">
     <mxGraphModel dx="1372" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
         <mxCell id="MCVfwnQsfJUGCIEPmZ6I-17" value="topic publish" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;" vertex="1" parent="1">
           <mxGeometry x="852" y="350" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-18" value="프로그램 종료" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;" vertex="1" parent="1">
+        <mxCell id="MCVfwnQsfJUGCIEPmZ6I-18" value="프로그램 종료" style="rounded=1;whiteSpace=wrap;html=1;arcSize=16;" vertex="1" parent="1">
           <mxGeometry x="1015" y="350" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="MCVfwnQsfJUGCIEPmZ6I-19" value="" style="group" vertex="1" connectable="0" parent="1">
