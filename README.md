@@ -1,5 +1,5 @@
 # turtlebot3_tutorial_ros2
-<img src='image\teleoperation_1.gif' width="200"/><img src='image\subscribe.gif' width="200"/><img src='image\obstacle_detection.gif' width="200"/><img src='image\obstacle_avoidance.gif' width="200"/>
+<img src='image\teleoperation_1.gif' width="400"/><img src='image\subscribe.gif' width="400"/><img src='image\obstacle_detection.gif' width="400"/><img src='image\obstacle_avoidance.gif' width="400"/>
 
 본 리포지토리는 turtlebot3와 ROS2를 활용하여 기본적인 topic publishing, subscribe, service call 등을 실습해보기 위해 존재합니다.
 
