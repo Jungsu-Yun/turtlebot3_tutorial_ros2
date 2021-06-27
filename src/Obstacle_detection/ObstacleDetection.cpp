@@ -23,4 +23,8 @@ void ObstacleDetection::laser_callback(const sensor_msgs::msg::LaserScan::Shared
         else
             RCLCPP_ERROR(this->get_logger(), "Failed to call service Sound");
     }
+    else
+    {
+        RCLCPP_INFO(this->get_logger(), "Current obstacle distance : %f \t %f", msg->ranges[0], msg->ranges[345]);
+    }
 }
