@@ -261,3 +261,88 @@ else
 
 
 ## 5. obstacle_avoidance_node
+turtlebot3가 전진을 하다 전방 45º 반경 내에 30cm 이내로 장애물이 인식되는 경우 시계방향으로 회전하고 장애물이 감지되지 않으면 다시 전진을 합니다.
+
+### __구동 Process__
+<img src="image\obstacle_avoidance_process.jpg"/>
+
+### __Sourcecode 설명__
+`ObstacleAvoidance`클래스의 Constructor에서 `scan`topic을 subscribe하는 `rclcpp::Subscription`을 선언한다.
+```c++
+ this->laser_subscriber = this->create_subscription<sensor_msgs::msg::LaserScan>("/scan",defalut_qos, std::bind(&ObstacleDetection::laser_callback,this, _1));
+```
+
+`laser callback`함수를 호출하여 `laser_scan`값의 15º값, 0º값, 345º값을 읽어온다. message의 `range`를 사용하며 rage는 각 1도씩 거리정보를 담아두게되는 vector클래스로 구성되어 있다.
+```msg
+# Single scan from a planar laser range-finder
+#
+# If you have another ranging device with different behavior (e.g. a sonar
+# array), please find or create a different message, since applications
+# will make fairly laser-specific assumptions about this data
+
+Header header            # timestamp in the header is the acquisition time of 
+                         # the first ray in the scan.
+                         #
+                         # in frame frame_id, angles are measured around 
+                         # the positive Z axis (counterclockwise, if Z is up)
+                         # with zero angle being forward along the x axis
+                         
+float32 angle_min        # start angle of the scan [rad]
+float32 angle_max        # end angle of the scan [rad]
+float32 angle_increment  # angular distance between measurements [rad]
+
+float32 time_increment   # time between measurements [seconds] - if your scanner
+                         # is moving, this will be used in interpolating position
+                         # of 3d points
+float32 scan_time        # time between scans [seconds]
+
+float32 range_min        # minimum range value [m]
+float32 range_max        # maximum range value [m]
+
+float32[] ranges         # range data [m] (Note: values < range_min or > range_max should be discarded)
+float32[] intensities    # intensity data [device-specific units].  If your
+                         # device does not provide intensities, please leave
+                         # the array empty.
+```
+range값에서 특정 detection 범위 이내가 아니라면 전진, 범위 이내로 장애물이 인식된 경우 시계방향으로 회전하는 `callback`함수를 구현한다.
+```c++
+void ObstacleAvoidance::laser_scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
+{
+    std::cout<< "Callback!!!" << std::endl;
+    if(msg->ranges[0] > this->distance_limit && msg->ranges[45] > this->distance_limit && msg->ranges[315] > this->distance_limit)
+    {
+        this->twist.linear.x = 0.05;
+        this->twist.angular.z = 0;
+        RCLCPP_INFO(this->get_logger(), "current distance: left_side = %f \t right_side %f", msg->ranges[345], msg->ranges[315]);
+    }
+    else
+    {
+        this->twist.linear.x = 0;
+        this->twist.angular.z = 0.5;
+
+        auto sound = std::make_shared<turtlebot3_msgs::srv::Sound::Request>();
+        sound->value = 3;
+
+        auto result = sound_client->async_send_request(sound);
+        if(rclcpp::spin_until_future_complete(this->sound_node, result) == rclcpp::executor::FutureReturnCode::SUCCESS)
+            RCLCPP_WARN(this->get_logger(), "Too close!! turn left side");
+        else
+            RCLCPP_ERROR(this->get_logger(), "Failed to call service Sound");
+    }
+    this->twist_publisher->publish(this->twist);
+}
+```
+
+### __구동하기__
+* turtlebot3 구동 명령어
+    ```bash
+    $ ros2 launch turtlebot3_bringup robot.launch.py
+    ```
+
+* Remote PC 구동 명령어
+    ```bash
+    $ ros2 run turtlebot3_tutorial_ros2 obstacle_avoidance_node
+    ```
+
+### __동작결과__
+
