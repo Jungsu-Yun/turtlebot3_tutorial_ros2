@@ -21,9 +21,10 @@ private:
     rclcpp::Client<turtlebot3_msgs::srv::Sound>::SharedPtr sound_client;
 
     double minimum_distace;
+    bool is_real;
 
 public:
-    ObstacleDetection();
+    ObstacleDetection(bool is_real, double minimum_distance);
     void laser_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg);
 };
 

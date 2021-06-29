@@ -13,6 +13,8 @@ Teleoperation::Teleoperation() : Node("turtlebot3_teleoperation_cpp")
 
     this->command = "Let's Control Turtlebot3!\n--------------------------------moving around:\n\tw\na\ts\td\n\tx\nw/x : increase/decrease linear velocity (Burger : ~ 0.22)\na/d : increase/decrease angular velocity (Burger : ~ 2.84)\n\nspace key, s : force stop\n\nq to quit\n";
 
+    teleop = this;
+    signal(SIGINT, Teleoperation::interrupt_handler);
 }
 
 geometry_msgs::msg::Twist Teleoperation::calculate_max_speed(geometry_msgs::msg::Twist twist)
@@ -42,7 +44,7 @@ void Teleoperation::publishing_data(geometry_msgs::msg::Twist twist)
 void Teleoperation::teleoperation_node()
 {
     std::cout << command << std::endl;
-    while(true)
+    while(rclcpp::ok())
     {
         if(kbhit())
         {
@@ -134,4 +136,19 @@ int Teleoperation::kbhit()
     }
 
     return 0;
+}
+
+void Teleoperation::stop_turtlebot()
+{
+    this->twist.linear.x = 0;
+    this->twist.angular.z = 0;
+    publishing_data(this->twist);
+    RCLCPP_ERROR(this->get_logger(), "Keyboard Interrupt, Stop Program");
+    exit(0);
+}
+
+void Teleoperation::interrupt_handler(int signal)
+{
+    if(signal == 2)
+        teleop->stop_turtlebot();
 }

@@ -19,7 +19,6 @@ private:
 public:
     BatterySubscriber();
     void battery_callback(const sensor_msgs::msg::BatteryState::SharedPtr msg) const;
-
 };
 
 

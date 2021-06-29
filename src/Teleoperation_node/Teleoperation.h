@@ -17,6 +17,7 @@
 #include <fcntl.h>
 
 #include <iostream>
+#include <stdio.h>
 
 #define MAX_TURTLEBOT_LINEAR_SPEED 0.22
 #define MAX_TURTLEBOT_ANGULAR_SPEED 2.84
@@ -45,7 +46,11 @@ public:
     void publishing_data(geometry_msgs::msg::Twist twist);
     int getch();
     int kbhit();
+
+    void stop_turtlebot();
+    static void interrupt_handler(int signal);
 };
 
+static Teleoperation* teleop;
 
 #endif //TURTLEBOT3_EXAMPLE_TELEOPERATION_H
