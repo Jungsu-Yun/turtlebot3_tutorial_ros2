@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/include -I/opt/ros/dashing/include
+CXX_INCLUDES = -I/opt/ros/dashing/include
 
 CXX_FLAGS = -g -Wall -Wextra -Wpedantic -std=gnu++14
 

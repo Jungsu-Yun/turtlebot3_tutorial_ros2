@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edgeilab/turtlebot3_tutorial_ros2
+CMAKE_SOURCE_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
 
 # Utility rule file for uninstall.
 
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -P /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -P /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -90,6 +90,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edgeilab/turtlebot3_tutorial_ros2 /home/edgeilab/turtlebot3_tutorial_ros2 /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

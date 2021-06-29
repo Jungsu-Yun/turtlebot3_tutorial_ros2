@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edgeilab/turtlebot3_tutorial_ros2
+CMAKE_SOURCE_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/obstacle_detection_node.dir/depend.make
@@ -78,29 +78,29 @@ include CMakeFiles/obstacle_detection_node.dir/flags.make
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o: ../src/Obstacle_detection/obstacle_detection_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o -c /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o -c /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp > CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp > CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.s
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o: ../src/Obstacle_detection/ObstacleDetection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o -c /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o -c /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp > CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp > CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp -o CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.s
 
 # Object files for target obstacle_detection_node
 obstacle_detection_node_OBJECTS = \
@@ -148,13 +148,13 @@ obstacle_detection_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport
 obstacle_detection_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
 obstacle_detection_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
 obstacle_detection_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_generator_c.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_c.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_cpp.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_c.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_c.so
-obstacle_detection_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_cpp.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_generator_c.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_c.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_cpp.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_c.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_c.so
+obstacle_detection_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_cpp.so
 obstacle_detection_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_c.so
 obstacle_detection_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 obstacle_detection_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_generator_c.so
@@ -189,7 +189,7 @@ obstacle_detection_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport
 obstacle_detection_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 obstacle_detection_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable obstacle_detection_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable obstacle_detection_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obstacle_detection_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -202,6 +202,6 @@ CMakeFiles/obstacle_detection_node.dir/clean:
 .PHONY : CMakeFiles/obstacle_detection_node.dir/clean
 
 CMakeFiles/obstacle_detection_node.dir/depend:
-	cd /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edgeilab/turtlebot3_tutorial_ros2 /home/edgeilab/turtlebot3_tutorial_ros2 /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/obstacle_detection_node.dir/depend
 

@@ -4,14 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp" "/home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o"
-  "/home/edgeilab/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp" "/home/edgeilab/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o"
+  "/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/ObstacleDetection.cpp" "/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/ObstacleDetection.cpp.o"
+  "/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Obstacle_detection/obstacle_detection_node.cpp" "/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/include"
   "/opt/ros/dashing/include"
   )
 

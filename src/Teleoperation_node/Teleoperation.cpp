@@ -3,6 +3,7 @@
 Teleoperation::Teleoperation() : Node("turtlebot3_teleoperation_cpp")
 {
     this->cmd_pub = create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+
     this->target_twist_linear_x = 0;
     this->target_tiwst_angular_z = 0;
 
@@ -10,9 +11,8 @@ Teleoperation::Teleoperation() : Node("turtlebot3_teleoperation_cpp")
     this->step_angular_speed = 0.1;
     this->command_cnt = 0;
 
-    this->command = "Let's Control Turtlebot3!\n--------------------------------moving around:\n\tw\na\ts\td\n\tx\nw/x : increase/decrease linear velocity (Burger : ~ 0.22)\na/d : increase/decrease angular velocity (Burger : ~ 2.84)\n\nspace key, s : force stop\n\nCTRL-C or q to quit\n";
+    this->command = "Let's Control Turtlebot3!\n--------------------------------moving around:\n\tw\na\ts\td\n\tx\nw/x : increase/decrease linear velocity (Burger : ~ 0.22)\na/d : increase/decrease angular velocity (Burger : ~ 2.84)\n\nspace key, s : force stop\n\nq to quit\n";
 
-    teleoperation_node();
 }
 
 geometry_msgs::msg::Twist Teleoperation::calculate_max_speed(geometry_msgs::msg::Twist twist)
@@ -61,9 +61,13 @@ void Teleoperation::teleoperation_node()
                 this->target_tiwst_angular_z = 0;
             }
             else if(key == 'q')
+            {
+                this->twist.linear.x = 0;
+                this->twist.angular.z = 0;
+                publishing_data(this->twist);
+                RCLCPP_ERROR(this->get_logger(), "Stop Program");
                 break;
-            else
-                RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Wrong input!");
+            }
 
             this->twist.linear.x = this->target_twist_linear_x;
             this->twist.angular.z = this->target_tiwst_angular_z;
