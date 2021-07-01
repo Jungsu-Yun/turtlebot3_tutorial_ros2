@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2
+CMAKE_SOURCE_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,6 +74,7 @@ CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-bui
 # The main recursive "all" target.
 all: CMakeFiles/teleoperation_node.dir/all
 all: CMakeFiles/obstacle_avoidance_node.dir/all
+all: CMakeFiles/sound_service_node.dir/all
 all: CMakeFiles/obstacle_detection_node.dir/all
 all: CMakeFiles/subscribe_battery_node.dir/all
 
@@ -88,6 +89,7 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/teleoperation_node.dir/clean
 clean: CMakeFiles/obstacle_avoidance_node.dir/clean
+clean: CMakeFiles/sound_service_node.dir/clean
 clean: CMakeFiles/obstacle_detection_node.dir/clean
 clean: CMakeFiles/subscribe_battery_node.dir/clean
 
@@ -100,14 +102,14 @@ clean: CMakeFiles/subscribe_battery_node.dir/clean
 CMakeFiles/uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -127,14 +129,14 @@ CMakeFiles/uninstall.dir/clean:
 CMakeFiles/teleoperation_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teleoperation_node.dir/build.make CMakeFiles/teleoperation_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teleoperation_node.dir/build.make CMakeFiles/teleoperation_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=10,11,12 "Built target teleoperation_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=13,14,15 "Built target teleoperation_node"
 .PHONY : CMakeFiles/teleoperation_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teleoperation_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/teleoperation_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/teleoperation_node.dir/rule
 
 # Convenience name for target.
@@ -154,14 +156,14 @@ CMakeFiles/teleoperation_node.dir/clean:
 CMakeFiles/obstacle_avoidance_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target obstacle_avoidance_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target obstacle_avoidance_node"
 .PHONY : CMakeFiles/obstacle_avoidance_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/obstacle_avoidance_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/obstacle_avoidance_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/obstacle_avoidance_node.dir/rule
 
 # Convenience name for target.
@@ -175,20 +177,47 @@ CMakeFiles/obstacle_avoidance_node.dir/clean:
 .PHONY : CMakeFiles/obstacle_avoidance_node.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/sound_service_node.dir
+
+# All Build rule for target.
+CMakeFiles/sound_service_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target sound_service_node"
+.PHONY : CMakeFiles/sound_service_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sound_service_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sound_service_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sound_service_node.dir/rule
+
+# Convenience name for target.
+sound_service_node: CMakeFiles/sound_service_node.dir/rule
+
+.PHONY : sound_service_node
+
+# clean rule for target.
+CMakeFiles/sound_service_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/clean
+.PHONY : CMakeFiles/sound_service_node.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/obstacle_detection_node.dir
 
 # All Build rule for target.
 CMakeFiles/obstacle_detection_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target obstacle_detection_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=4,5,6 "Built target obstacle_detection_node"
 .PHONY : CMakeFiles/obstacle_detection_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/obstacle_detection_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/obstacle_detection_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/obstacle_detection_node.dir/rule
 
 # Convenience name for target.
@@ -208,14 +237,14 @@ CMakeFiles/obstacle_detection_node.dir/clean:
 CMakeFiles/subscribe_battery_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/subscribe_battery_node.dir/build.make CMakeFiles/subscribe_battery_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/subscribe_battery_node.dir/build.make CMakeFiles/subscribe_battery_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target subscribe_battery_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=10,11,12 "Built target subscribe_battery_node"
 .PHONY : CMakeFiles/subscribe_battery_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/subscribe_battery_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/subscribe_battery_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/subscribe_battery_node.dir/rule
 
 # Convenience name for target.

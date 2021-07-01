@@ -47,11 +47,15 @@ ament_target_dependencies(obstacle_detection_node rclcpp std_msgs geometry_msgs 
 add_executable(obstacle_avoidance_node src/Obstacle_avoidance/obstacle_avoidance_node.cpp src/Obstacle_avoidance/ObstacleAvoidance.cpp src/Obstacle_avoidance/ObstacleAvoidance.h)
 ament_target_dependencies(obstacle_avoidance_node rclcpp std_msgs geometry_msgs turtlebot3_msgs sensor_msgs)
 
+add_executable(sound_service_node src/Sound_service/sound_service_client.cpp src/Sound_service/SoundClient.cpp src/Sound_service/SoundClient.h)
+ament_target_dependencies(sound_service_node rclcpp std_msgs geometry_msgs turtlebot3_msgs sensor_msgs)
+
 install(TARGETS
         teleoperation_node
         subscribe_battery_node
         obstacle_detection_node
         obstacle_avoidance_node
+        sound_service_node
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

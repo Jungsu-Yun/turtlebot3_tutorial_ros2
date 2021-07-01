@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2
+CMAKE_SOURCE_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/subscribe_battery_node.dir/depend.make
@@ -78,29 +78,29 @@ include CMakeFiles/subscribe_battery_node.dir/flags.make
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o: CMakeFiles/subscribe_battery_node.dir/flags.make
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o: ../src/Subscribe_Battery/subscribe_battery_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o -c /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.o -c /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp > CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp > CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.i
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/subscribe_battery_node.cpp -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/subscribe_battery_node.cpp.s
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o: CMakeFiles/subscribe_battery_node.dir/flags.make
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o: ../src/Subscribe_Battery/BatterySubscriber.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o -c /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.o -c /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp > CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp > CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.i
 
 CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/src/Subscribe_Battery/BatterySubscriber.cpp -o CMakeFiles/subscribe_battery_node.dir/src/Subscribe_Battery/BatterySubscriber.cpp.s
 
 # Object files for target subscribe_battery_node
 subscribe_battery_node_OBJECTS = \
@@ -148,13 +148,13 @@ subscribe_battery_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_
 subscribe_battery_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_introspection_cpp.so
 subscribe_battery_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
 subscribe_battery_node: /opt/ros/dashing/lib/libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_generator_c.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_c.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_cpp.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_c.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_c.so
-subscribe_battery_node: /opt/ros/dashing/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_cpp.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_generator_c.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_c.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_cpp.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_c.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_introspection_cpp.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_c.so
+subscribe_battery_node: /home/edgeilab/turtlebot3_ws/install/turtlebot3_msgs/lib/libturtlebot3_msgs__rosidl_typesupport_fastrtps_cpp.so
 subscribe_battery_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_c.so
 subscribe_battery_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 subscribe_battery_node: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_generator_c.so
@@ -189,7 +189,7 @@ subscribe_battery_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_
 subscribe_battery_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 subscribe_battery_node: /opt/ros/dashing/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 subscribe_battery_node: CMakeFiles/subscribe_battery_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable subscribe_battery_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable subscribe_battery_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/subscribe_battery_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -202,6 +202,6 @@ CMakeFiles/subscribe_battery_node.dir/clean:
 .PHONY : CMakeFiles/subscribe_battery_node.dir/clean
 
 CMakeFiles/subscribe_battery_node.dir/depend:
-	cd /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2 /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/subscribe_battery_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2 /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2 /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles/subscribe_battery_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/subscribe_battery_node.dir/depend
 

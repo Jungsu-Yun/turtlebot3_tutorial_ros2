@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2
+CMAKE_SOURCE_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,19 +78,31 @@ CMAKE_BINARY_DIR = /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-bui
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -101,7 +113,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -112,7 +124,7 @@ test/fast: test
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -123,13 +135,13 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/edgeilab/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target list_install_components
@@ -142,23 +154,11 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/jungsu/clion-2021.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jungsu/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edgeilab/colcon_ws/src/turtlebot3_tutorial_ros2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,6 +224,19 @@ obstacle_avoidance_node: cmake_check_build_system
 obstacle_avoidance_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_avoidance_node.dir/build.make CMakeFiles/obstacle_avoidance_node.dir/build
 .PHONY : obstacle_avoidance_node/fast
+
+#=============================================================================
+# Target rules for targets named sound_service_node
+
+# Build rule for target.
+sound_service_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sound_service_node
+.PHONY : sound_service_node
+
+# fast build rule for target.
+sound_service_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/build
+.PHONY : sound_service_node/fast
 
 #=============================================================================
 # Target rules for targets named obstacle_detection_node
@@ -359,6 +372,60 @@ src/Obstacle_detection/obstacle_detection_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/Obstacle_detection/obstacle_detection_node.cpp.s
 .PHONY : src/Obstacle_detection/obstacle_detection_node.cpp.s
 
+src/Sound_service/SoundClient.o: src/Sound_service/SoundClient.cpp.o
+
+.PHONY : src/Sound_service/SoundClient.o
+
+# target to build an object file
+src/Sound_service/SoundClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/SoundClient.cpp.o
+.PHONY : src/Sound_service/SoundClient.cpp.o
+
+src/Sound_service/SoundClient.i: src/Sound_service/SoundClient.cpp.i
+
+.PHONY : src/Sound_service/SoundClient.i
+
+# target to preprocess a source file
+src/Sound_service/SoundClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/SoundClient.cpp.i
+.PHONY : src/Sound_service/SoundClient.cpp.i
+
+src/Sound_service/SoundClient.s: src/Sound_service/SoundClient.cpp.s
+
+.PHONY : src/Sound_service/SoundClient.s
+
+# target to generate assembly for a file
+src/Sound_service/SoundClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/SoundClient.cpp.s
+.PHONY : src/Sound_service/SoundClient.cpp.s
+
+src/Sound_service/sound_service_client.o: src/Sound_service/sound_service_client.cpp.o
+
+.PHONY : src/Sound_service/sound_service_client.o
+
+# target to build an object file
+src/Sound_service/sound_service_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/sound_service_client.cpp.o
+.PHONY : src/Sound_service/sound_service_client.cpp.o
+
+src/Sound_service/sound_service_client.i: src/Sound_service/sound_service_client.cpp.i
+
+.PHONY : src/Sound_service/sound_service_client.i
+
+# target to preprocess a source file
+src/Sound_service/sound_service_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/sound_service_client.cpp.i
+.PHONY : src/Sound_service/sound_service_client.cpp.i
+
+src/Sound_service/sound_service_client.s: src/Sound_service/sound_service_client.cpp.s
+
+.PHONY : src/Sound_service/sound_service_client.s
+
+# target to generate assembly for a file
+src/Sound_service/sound_service_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sound_service_node.dir/build.make CMakeFiles/sound_service_node.dir/src/Sound_service/sound_service_client.cpp.s
+.PHONY : src/Sound_service/sound_service_client.cpp.s
+
 src/Subscribe_Battery/BatterySubscriber.o: src/Subscribe_Battery/BatterySubscriber.cpp.o
 
 .PHONY : src/Subscribe_Battery/BatterySubscriber.o
@@ -483,6 +550,7 @@ help:
 	@echo "... uninstall"
 	@echo "... obstacle_avoidance_node"
 	@echo "... obstacle_detection_node"
+	@echo "... sound_service_node"
 	@echo "... subscribe_battery_node"
 	@echo "... teleoperation_node"
 	@echo "... src/Obstacle_avoidance/ObstacleAvoidance.o"
@@ -497,6 +565,12 @@ help:
 	@echo "... src/Obstacle_detection/obstacle_detection_node.o"
 	@echo "... src/Obstacle_detection/obstacle_detection_node.i"
 	@echo "... src/Obstacle_detection/obstacle_detection_node.s"
+	@echo "... src/Sound_service/SoundClient.o"
+	@echo "... src/Sound_service/SoundClient.i"
+	@echo "... src/Sound_service/SoundClient.s"
+	@echo "... src/Sound_service/sound_service_client.o"
+	@echo "... src/Sound_service/sound_service_client.i"
+	@echo "... src/Sound_service/sound_service_client.s"
 	@echo "... src/Subscribe_Battery/BatterySubscriber.o"
 	@echo "... src/Subscribe_Battery/BatterySubscriber.i"
 	@echo "... src/Subscribe_Battery/BatterySubscriber.s"
